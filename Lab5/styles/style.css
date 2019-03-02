@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+/* ===================== COLORS ====================== */
+
+.bg_main {
+	background-color: cadetblue;
+}
+
+/* ===================== GENERAL RULES ====================== */
+
+body {
+	/* background-color: yellow; */
+	padding: 0;
+	margin: 0;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+/* ===================== HEADER RULES ====================== */
+
+header {
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 30vh;
+	background-color: black;
+}
+
+.splash {
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+
+	background-image: url("../img/cover_img.jpg");
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom 30% right 50%;
+	height: calc(30vh - 40px);
+
+	z-index: 100;
+}
+
+.logo {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	text-align: center;
+	background-color: rgba(240, 248, 255, 0.6);
+	backdrop-filter: blur(5px);
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 5px;
+
+}
+
+.logo img {
+	height: calc(20vh);
+	width: calc(20vh * 2);
+	max-height: 150px;
+	max-width: 300px;
+	padding: 0;
+	margin: 0;
+}
+
+nav.navbar {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	min-width: 600px;
+	background-color: cadetblue;
+	z-index: 10;
+}
+
+.menu {
+	display: block;
+	position: relative;
+	top: 0;
+	float: left;
+	height: 20px;
+	width: 150px;
+	padding: 0;
+	text-align: center;
+
+	z-index: 100;
+}
+
+.menu>.menu_item {
+	border-right: 2px #46898b solid;
+	border-bottom: none;
+}
+
+.menu_item {
+	position: relative;
+	top: 0;
+	
+	padding: 10px 0 10px;
+	margin: 0;
+
+	color: #ddd;
+	background-color: cadetblue;
+	border-bottom: 1px #46898b solid;
+
+	z-index: 100;
+}
+
+.menu_item a {
+	text-decoration: none;
+	color: #ddd;
+}
+
+.menu_item:hover {
+	background-color: rgb(114, 181, 184);
+}
+
+.menu_item:hover,
+.menu_item:hover a {
+	color: white;
+}
+
+
+.menu_item.current a {
+	border-bottom: 4px solid rgb(119, 208, 212);
+	color: white;
+	
+}
+
+.menu_item.current:hover,
+ .menu_item.current:hover a {
+	background-color: cadetblue;
+	color: white;
+
+}
+
+.dropdown {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background-color: cadetblue;
+	border-bottom: 2px #46898b solid;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+	transform: translateY(-100%);
+	transition: transform ease-in-out 1s;
+
+	z-index: 10;
+}
+
+.dropdown ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 5px 3px;
+}
+
+.menu:hover .dropdown {
+	transform: translateY(0);
+}
+
+/* ===================== MAIN RULES ====================== */
+
+main {
+	margin: 0;
+}
+
+main section {
+	margin: 0 auto;
+	padding: 10px 20px;
+	width: 80%;
+	height: 100%;
+	background-color: whitesmoke;
+	overflow: auto;
+	text-align: justify;
+	line-height: 1.5rem;
+
+}
+
+main section h1{
+	font-size: 2rem;
+}
+
+main section p {
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.year_list {
+	line-height: 2rem;
+}
+
+.year_list {
+	line-height: 2rem;
+}
+
+.year_list li a{
+	color: cadetblue;
+	text-decoration: none;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.year_list li a:hover{
+	color: cadetblue;
+	font-weight: 900;
+}
+
+.header_coverimg {
+	display: flex;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+	justify-content: flex-start;
+	align-items: flex-end;
+	margin: 10px 0 20px;; 
+}
+
+.header_text {
+	padding: 1rem;
+	display: flex;
+	border-top-right-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.6);
+	overflow: hidden;
+	
+}
+
+.header_text h1 {
+	margin: 2rem auto;
+	display: inline;
+	text-align: left;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	flex-wrap: wrap;
+	line-height: 1em;
+	font-weight: 700;
+	color: white;
+	font-size: 4rem;
+}
+
+/* ===================== FOOTER RULES ====================== */
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin-top: 100px;
+
+	min-height: 60px;
+	background-color: cadetblue;
+}
+
+.copyright {
+	height: 40px;
+	padding: 5px 20px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	overflow: hidden;
+
+}
+
+.copyright span {
+	border-right: 1px grey solid;
+	border-left: 1px grey solid;
+	padding: 0 10px;
+}
+
+
+/* ===================== HELPER RULES ====================== */
+
+.img_right {
+	float: right;
+	padding: 0;
+	margin: 0;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.left {
+	float: left;
+	padding: 0;
+	margin: 0;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.hide {
+	display: none;
+}
+
+
+
+/* =============== background cover images ============= */
+
+
+
+.bg_cs {
+	background-image: url("../img/covers/CS.jpg")
+}
+
+.bg_os {
+	background-image: url("../img/covers/OS.jpg")
+}
+
+.bg_net1 {
+	background-image: url("../img/covers/NET1.jpg")
+}
+
+.bg_net2 {
+	background-image: url("../img/covers/NET2.jpg")
+}
+
+.bg_sdev1 {
+	background-image: url("../img/covers/soft1.jpg")
+}
+
+.bg_sdev2 {
+	background-image: url("../img/covers/soft2.jpg")
+}
+
+.bg_sdev3 {
+	background-image: url("../img/covers/soft3.jpg")
+}
+
+.bg_wdev {
+	background-image: url("../img/covers/html.jpg")
+}
+
+.bg_math {
+	background-image: url("../img/covers/math.jpg")
+}
+
+.bg_webap {
+	background-image: url("../img/covers/Dev.jpg")
+}
+
+.bg_ent {
+	background-image: url("../img/covers/enterprice.jpg")
+}
+
+.bg_data {
+	background-image: url("../img/covers/data.jpg")
+}
+
+/* =============== flex rules ============= */
+
+.flexbox {
+	display: flex;
+}
+
+.flexinline {
+	display: inline-flex;
+}
+
+.fx_dir_row {
+	flex-direction: row;
+}
+
+.fx_dir_column {
+	flex-direction: column;
+}
+
+.fx_al_bottom {
+	align-items: flex-end;
+}
+
+.fx_al_stretch {
+	align-items: stretch;
+}
+
+.fx_just_start {
+	justify-content: flex-start;
+}
+
+/* ===================== MEDIA QUERIES ====================== */
+
+@media (max-width: 330px) {
+
+	.logo {
+		right: 5px;
+		top: 5px;
+		left: 5px;
+		bottom: 5px;
+	}
+
+	.logo img {
+		min-width: unset;
+		max-width: unset;
+		width: 100%;
+	}
+}
+
+@media (max-height: 670px) {
+	.logo {
+		top: 5px;
+		left: 5px;
+		bottom: 5px;
+	}
+
+	.logo img {
+		height: 100%;
+	}
+}
+
+@media (max-width: 600px){
+
+}
