@@ -1,0 +1,205 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 24px;
+
+	box-sizing: border-box;
+}
+
+#wrapper {
+	width: 60%;
+	min-width: 600px;
+	margin: 30px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Times New Roman', Times, serif;
+}
+
+/* HEADER RULES */
+
+header {
+	border: cadetblue 3px solid;
+	padding: 10px 5px 5px;
+	overflow: hidden;
+}
+
+header .logo {
+	display: inline-block;
+	width: 24%;
+	margin-right: 1%;
+	text-align: center;	
+}
+
+header img {
+	min-width: 50%;
+	max-width: 100%;
+	max-height: 70px;
+}
+
+.header-text {
+	display: inline-block;
+	width: 74%;
+	height: auto;
+	
+}
+
+/* NAVIGATION RULES */
+
+nav {
+	margin-bottom: 10px;
+	padding: 5px 5px 20px;
+	border: black 1px solid;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin: 0;
+	padding: 0 5px;
+	display: inline;
+	list-style-type: none;
+	border-right: black 1px dashed;
+}
+
+nav a {
+	color: black;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: blue;
+}
+
+/* MAIN RULES */
+
+main {
+	margin: 10px;
+}
+
+section {
+	display: block;
+	height: auto;
+	width: 100%;
+	margin: 0;
+	overflow: auto;
+	clear: both;
+}
+
+/* MAIN RULES - SIDE BAR*/
+
+aside {
+	width: 35%;
+}
+
+aside div {
+	margin: 10px 0;
+	padding: 10px;
+}
+
+aside div h2 {
+	margin: 0;
+	margin-bottom: 5px;
+	color: darkcyan;
+}
+
+aside div p {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+#primary {
+	border: green 3px solid;
+}
+
+#secondary {
+	border: black 1px solid;
+}
+
+.box {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+/* MAIN RULES - ARTICLE */
+
+article {
+	margin: 0;
+	margin-left: 1%;
+	padding: 10px;
+	border: red 1px dashed;
+	width: 60%;
+	padding-bottom: 50px;
+}
+
+article p {
+	padding: 0;
+	margin: 0;
+}
+
+/* MAIN RULES - BOTTOM DIVS */
+
+.divs {
+	float: right;
+	width: 100px;
+	margin: 0 10px;
+	padding: 5px;
+	border: black 1px solid;
+}
+
+#div1 {
+	background-color: thistle;
+	padding-bottom: 20px;
+}
+
+#div2 {
+	background-color: olivedrab;
+	padding-bottom: 50px;
+}
+
+#div3 {
+	background-color: peachpuff;
+}
+
+#div4 {
+	background-color: gainsboro;
+	padding-bottom: 15px;
+}
+
+/* FOOTER */
+
+footer {
+	padding: 5px;
+	height: 40px;
+	clear: both;
+
+	border: black 1px solid;
+
+}
+
+
+/* HELPER RULES*/
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
+
+.clear {
+	margin: 0;
+	padding: 0;
+}
+
