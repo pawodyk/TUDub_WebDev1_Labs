@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 8 - Initial</title>
+
+    <style>
+        .wrapper {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: black 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <span><a href="./index.html">Link to updated html</a></span>
+    <div class="wrapper">
+        <h1>Survey</h1>
+        <p>If you have a moment, we'd appreciate it if you would fill out this survey</p>
+        <form action="submit">
+            <h2>Your Information</h2>
+            <p>First Name<input type="text"></p>
+            <p>Last Name<input type="text"></p>
+            <p>Email Address<input type="email"></p>
+
+            <h2>How did you hear about us?</h2>
+            <input type="radio" name="radioOption1" value="Search Engine">Search Engine
+            <input type="radio" name="radioOption1" value="Word of mouth"> Word of mouth
+            <input type="radio" name="radioOption1" value="Other"> Other
+
+            <h2>Would You like to receive anouncements about new CDs and specialoffers?</h2>
+            <p><input type="checkbox"> Yes, I'd like to receive Information on new CD's and special offers.</p>
+            <p>
+                Please contact us by : 
+                <select name="dropdown">
+                    <option value="email" selected>email</option>
+                    <option value="postal">postal</option>
+                    <option value="phone">phone</option>
+                    <option value="facebook">facebook</option>
+                </select>
+            </p>
+
+            <hr>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

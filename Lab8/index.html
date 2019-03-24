@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 8 - Finished</title>
+
+    <style>
+        .wrapper {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: black 1px solid;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <span><a href="./old.html">Link to initial html</a></span>
+    <div class="wrapper">
+        <h1>Survey</h1>
+        <p>If you have a moment, we'd appreciate it if you would fill out this survey</p>
+        <form action="submit">
+            <fieldset>
+                <legend>Your Information</legend>
+                <p>First Name<input type="text"></p>
+                <p>Last Name<input type="text"></p>
+                <p>Email Address<input type="email"></p>
+            </fieldset>
+            <fieldset>
+                <legend>Would You like to receive anouncements about new CDs and specialoffers?</legend>
+                <p>
+                    <input type="checkbox" checked> Yes, I'd like to receive Information on new CD's and special offers.
+                </p>
+                <p>
+                    Please contact us by : 
+                    <select name="dropdown" multiple size="2">
+                        <option value="email" selected>email</option>
+                        <option value="postal">postal</option>
+                        <option value="phone">phone</option>
+                        <option value="facebook">facebook</option>
+                    </select>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>How did you hear about us?</legend>
+                <input type="radio" name="radioOption1" value="Search Engine">Search Engine
+                <input type="radio" name="radioOption1" value="Word of mouth"> Word of mouth
+                <input type="radio" name="radioOption1" value="Other" checked="checked"> Other
+            </fieldset>
+            <fieldset>
+                <legend>Comments</legend>
+                <textarea cols="100" rows="5"></textarea>
+            </fieldset>
+            <hr>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        
+    </div>
+</body>
+
+</html>
