@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,104 @@
     <title>Introduction to Web Development</title>
 
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: 20px auto 30px;
+            padding: 0;
+
+            border: 5px solid black;
+            border-radius: 20px;
+
+            z-index: 0;
+        }
+
+        header,
+        footer {
+            width: calc(100% - 100px);
+            padding: 20px 50px;
+            background-color: cadetblue;
+        }
+
+        header {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        footer {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        main ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 10px auto;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        main li {
+            text-align: center;
+            display: inline-block;
+            border: 2px black solid;
+            padding: 20px;
+            width: 100px;
+            margin: 10px;
+            background-color: dimgray;
+        }
+
+        main a li {
+            
+            background-color: gainsboro;
+            color: blue;
+        }
+
+        main a:visited li {
+            background-color: rgb(211, 207, 207);
+            color: blueviolet;
+        }
+
+        main a:hover li,
+        main a:focus li {
+            background-color: rgb(240, 239, 239);
+        }
+
         
+
+
     </style>
 </head>
+
 <body>
-    <h1>Introduction to Web Development</h1>
-    <ul>
-        <li><a href="Lab1/B00122935.html">LAB 1</a></li>
-        <li><a href="Lab2/hotel.html">LAB 2</a></li>
-        <li><a href="Lab3/hotel.html">LAB 3</a></li>
-        <li><a href="Lab4/index.html">LAB 4</a></li>
-        <li><a href="Lab5/index.html">LAB 5</a></li>
-        <li><a href="Lab6/index.html">LAB 6</a></li>
-        <li><a href="Lab7/index.html">LAB 7</a></li>
-        <li><a href="Lab8/index.html">LAB 8</a></li>
-        <li>LAB 9</li>
-        <li>LAB 10</li>
-    </ul>
+    <div class="wrapper">
+        <header>
+            <h1>Introduction to Web Development</h1>
+        </header>
+        <main>
+            <ul>
+                <a href="Lab1/B00122935.html"><li>LAB 1</li></a>
+                <a href="Lab2/hotel.html"><li>LAB 2</li></a>
+                <a href="Lab3/hotel.html"><li>LAB 3</li></a>
+                <a href="Lab4/index.html"><li>LAB 4</li></a>
+                <a href="Lab5/index.html"><li>LAB 5</li></a>
+                <a href="Lab6/index.html"><li>LAB 6</li></a>
+                <a href="Lab7/index.html"><li>LAB 7</li></a>
+                <a href="Lab8/index.html"><li>LAB 8</li></a>
+                <li>LAB 9</li>
+                <li>LAB 10</li>
+            </ul>
+        </main>
+        <footer>
+            &copy;opyright notice: All the work on this page was submited as part of introduction to the web development course at TU Dublin. If any of my projects are used you are required to credit my work.
+        </footer>
+    </div>
 </body>
+
 </html>
