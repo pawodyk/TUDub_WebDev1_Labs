@@ -24,19 +24,21 @@ h6 {
     width: 80%;
     background-color: white;
     height: calc(100% - 40px);
+    display: table;
 }
 
 aside.left_panel {
-    float: left;
     min-height: 100%;
     width: 130px;
     background-color: #9eb9f1;
     padding-left: 30px;
     overflow: auto;
+    display: table-cell;
+    vertical-align: top;
 }
 
 .right_panel {
-    margin-left: 160px;
+   display: table-cell;
 }
 
 nav ul {
