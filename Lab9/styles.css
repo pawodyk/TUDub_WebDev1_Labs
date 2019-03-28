@@ -1,0 +1,26 @@
+.wrapper {
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: black 1px solid;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+#fieldset1 div {
+    margin-bottom: 10px;
+}
+
+#fieldset1 label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    padding-right: 10px;
+}
