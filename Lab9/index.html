@@ -10,59 +10,98 @@
 
 <body>
     <div class="wrapper">
-        <h1>Survey</h1>
-        <p>If you have a moment, we'd appreciate it if you would fill out this survey</p>
-        <form action="submit">
+        <header class="surveyHeader">
+            <h1>Survey</h1>
+            <p>If you have a moment, we'd appreciate it if you would fill out this survey</p>
+        </header>
+        <form id="form" action="submit">
             <fieldset id="fieldset1">
                 <legend>Your Information</legend>
                 <div>
-                    <label for="fname">First Name</label><input type="text" id="fname" placeholder="Enter your First Name" required>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstName" placeholder="Enter your First Name" tabindex="1" required>
                 </div>
                 <div>
-                    <label for="lname">Last Name</label><input type="text" id="lname" placeholder="Enter your Last Name" required>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastName" placeholder="Enter your Last Name" tabindex="2" required>
                 </div>
                 <div>
-                    <label for="email">Email Address</label><input type="email" id="email" placeholder="Enter your email" required autofocus>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" tabindex="3" autofocus required>
                 </div>
                 <div>
-                    <label for="password">Password</label><input type="password" id="password" placeholder="Enter your password" required autofocus>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
                 </div>
                 <div>
-                    <label for="phone">Phone Number</label><input type="tel" pattern="-353-[0-9]{2}-[0-9]{7}" id="phone" placeholder="Enter your password" required autofocus>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" pattern="\+[0-9]{1,3}-[0-9]{2}-[0-9]{7}" title="Phone number must be in the following format: +XXX-XX-XXXXXXX" required>
                 </div>
             </fieldset>
             <fieldset id="fieldset2">
                 <legend>Would You like to receive anouncements about new CDs and specialoffers?</legend>
-                <p>
-                    <input type="checkbox" checked> Yes, I'd like to receive Information on new CD's and special offers.
-                </p>
+                <!-- Implicit label association with input -->
+                <label>
+                    <input type="checkbox" tabindex="4" checked> Yes, I'd like to receive Information on new CD's and special offers.
+                </label>
                 <p>
                     Please contact us by :
-                    <select name="dropdown" multiple size="2">
-                        <option value="email" selected>email</option>
-                        <option value="postal">postal</option>
-                        <option value="phone">phone</option>
-                        <option value="facebook">facebook</option>
+                    <select name="dropdown" tabindex="5">
+                        <optgroup label="Traditional">
+                            <option value="email" selected>e-mail</option>
+                            <option value="postal">Postal</option>
+                            <option value="phone">Phone</option>
+                        </optgroup>
+                        <optgroup label="Social Media">
+                            <option value="facebook">Facebook</option>
+                            <option value="facebook">Twitter</option>
+                            <option value="facebook">LinkedIn</option>
+                        </optgroup>
                     </select>
                 </p>
             </fieldset>
             <fieldset id="fieldset3">
                 <legend>How did you hear about us?</legend>
-                <input type="radio" name="radioOption1" value="Search Engine">Search Engine
-                <input type="radio" name="radioOption1" value="Word of mouth"> Word of mouth
-                <input type="radio" name="radioOption1" value="Other" checked="checked"> Other
+                <input type="radio" name="radioOption1" id="Search_Engine" value="Search Engine" tabindex="6" required>
+                <label for="Search_Engine">Search Engine</label>
+                <input type="radio" name="radioOption1" id="Word_of_Mouth" value="Word of mouth" tabindex="6" required>
+                <label for="Word_of_Mouth">Word of mouth</label>
+                <input type="radio" name="radioOption1" id="Other" value="Other" tabindex="6" checked="checked" required>
+                <label for="Other">Other</label>
+            </fieldset>
+            <fieldset>
+                <legend>Site Rating</legend>
+                <label for="rating">How do you like this page:</label>
+                <input type="range" name="rating" id="rating" min="1" max="5" value="5">
+                <output id="rating_result" name="rating_result"></output>
             </fieldset>
             <fieldset id="fieldset4">
                 <legend>Comments</legend>
-                <textarea cols="100" rows="5"></textarea>
+                <textarea cols="60" rows="5"></textarea>
             </fieldset>
             <hr>
             <div>
-                <button type="submit">Submit</button>
+                <button type="submit" formmethod="GET">Submit</button>
                 <button type="reset">Reset</button>
             </div>
         </form>
     </div>
+
+    <script>
+        function recalcTip() {
+            // timout is necessary for reset to work properlly
+            window.setTimeout(function(){
+                document.getElementById('rating_result').innerHTML = document.getElementById('rating').value;
+            }, 10)
+        }
+
+        document.getElementById('rating').addEventListener('input', recalcTip);
+
+        document.getElementById('form').addEventListener('reset', recalcTip);
+
+        window.addEventListener('DOMContentLoaded', recalcTip);
+    </script>
+
 </body>
 
 </html>
