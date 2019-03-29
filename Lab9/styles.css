@@ -1,12 +1,16 @@
 /* GENERAL */
 
+body {
+    background-color: white;
+}
+
 .wrapper {
     width: 600px;
     margin: 20px auto;
     padding: 10px;
 
-    background-color: whitesmoke;
-    border: black 1px solid;
+    background-color: forestgreen;
+    border: grey 1px solid;
 }
 
 /* HEADER */
