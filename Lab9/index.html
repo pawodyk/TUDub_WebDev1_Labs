@@ -12,7 +12,7 @@
     <div class="wrapper">
         <header class="surveyHeader">
             <h1>Survey</h1>
-            <p>If you have a moment, we'd appreciate it if you would fill out this survey</p>
+            <p>If you have a moment, we'd appreciate if you would fill out this survey</p>
         </header>
         <form id="form" action="submit">
             <fieldset id="fieldset1">
@@ -42,11 +42,11 @@
                 <legend>Would You like to receive anouncements about new CDs and specialoffers?</legend>
                 <!-- Implicit label association with input -->
                 <label>
-                    <input type="checkbox" tabindex="4" checked> Yes, I'd like to receive Information on new CD's and special offers.
+                    <input type="checkbox" id="checkbox" tabindex="4" checked> Yes, I'd like to receive Information on new CD's and special offers.
                 </label>
-                <p>
-                    Please contact us by :
-                    <select name="dropdown" tabindex="5">
+                <div>
+                    <label for="dropdown">Please contact us by :</label>
+                    <select id="dropdown" name="dropdown" tabindex="5">
                         <optgroup label="Traditional">
                             <option value="email" selected>e-mail</option>
                             <option value="postal">Postal</option>
@@ -58,7 +58,7 @@
                             <option value="facebook">LinkedIn</option>
                         </optgroup>
                     </select>
-                </p>
+                </div>
             </fieldset>
             <fieldset id="fieldset3">
                 <legend>How did you hear about us?</legend>
@@ -80,7 +80,7 @@
                 <textarea cols="60" rows="5"></textarea>
             </fieldset>
             <hr>
-            <div>
+            <div id="buttons">
                 <button type="submit" formmethod="GET">Submit</button>
                 <button type="reset">Reset</button>
             </div>
@@ -90,7 +90,7 @@
     <script>
         function recalcTip() {
             // timout is necessary for reset to work properlly
-            window.setTimeout(function(){
+            window.setTimeout(function () {
                 document.getElementById('rating_result').innerHTML = document.getElementById('rating').value;
             }, 10)
         }
