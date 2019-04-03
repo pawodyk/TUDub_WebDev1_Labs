@@ -1,0 +1,368 @@
+/* GENERAL */
+
+body {
+    background-color: white;
+}
+
+.wrapper {
+    width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+
+    background-color: forestgreen;
+    border: grey 1px solid;
+}
+
+/* HEADER */
+
+.surveyHeader {
+    margin-bottom: 0px;
+    padding: 20px;
+
+    background-color: lightgreen;
+    border: 2px solid green;
+    border-bottom: unset;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.surveyHeader h1 {
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid green;
+}
+
+/* FORM */
+
+#form {
+    padding: 10px;
+
+    background-color: lightgreen;
+    border: 2px solid green;
+    border-top: unset;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+
+    border: unset;
+    border-top: 5px solid green;
+
+}
+
+legend {
+    margin-bottom: 5px;
+    padding: 0 5px;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+
+    border-right: 2px solid green;
+    border-left: 2px solid green;
+}
+
+#fieldset1 {
+    background-color: red;
+}
+
+#fieldset2 {
+    background-color: skyblue;
+}
+
+#fieldset3 {
+    background-color: violet;
+}
+
+#fieldset4 {
+    background-color: orange;
+}
+
+#fieldset5 {
+    background-color: olive;
+}
+
+#fieldset6 {
+    background-color: yellow;
+}
+
+/* INPUT TEXT FIELDSET */
+
+#fieldset1 div {
+    margin-bottom: 10px;
+}
+
+#fieldset1 label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+input,
+select,
+select option {
+    padding: 5px 1px;
+
+    font-weight: 600;
+    font-size: 12px;
+
+    color: green;
+    background-color: whitesmoke;
+    border-top: 2px solid #018801;
+    border-left: 2px solid #018801;
+    border-bottom: 2px solid #26a726;
+    border-right: 2px solid #26a726;
+}
+
+input::placeholder {
+    font-weight: 500;
+    color: grey;
+}
+
+/*  */
+
+/* CONTACT FIELDSET */
+
+#fieldset2 p{
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#fieldset2 .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#fieldset2 .row label {
+    text-align: right;
+    width: 100px;
+}
+
+/* input#checkbox:checked,
+input#checkbox:checked::after {
+    color: green;
+}
+
+select optgroup {
+    color: whitesmoke;
+    background-color: forestgreen;
+}
+
+select option:hover,
+select option:checked {
+    background-color: lightgreen;
+    box-shadow: 0 0 10px 100px #000 inset;
+} */
+
+/* RADIO BUTTONS */
+
+/* input[type=checkbox]:not(old),
+input[type=radio]:not(old) {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    opacity: 0;
+}
+
+input[type=checkbox]:not(old),
+input[type=radio]:not(old) {
+    display: inline-block;
+    margin-left: -2em;
+    line-height: 1.5em;
+}
+
+input[type=checkbox]:not(old)>span,
+input[type=radio]:not(old)>span {
+    display: inline-block;
+    width: 0.875em;
+    height: 0.875em;
+    margin: 0.25em 0.5em 0.25em 0.25em;
+    border: 0.0625em solid rgb(192, 192, 192);
+    border-radius: 0.25em;
+    background: rgb(224, 224, 224);
+    background-image: -moz-linear-gradient(rgb(240, 240, 240), rgb(224, 224, 224));
+    background-image: -ms-linear-gradient(rgb(240, 240, 240), rgb(224, 224, 224));
+    background-image: -o-linear-gradient(rgb(240, 240, 240), rgb(224, 224, 224));
+    background-image: -webkit-linear-gradient(rgb(240, 240, 240), rgb(224, 224, 224));
+    background-image: linear-gradient(rgb(240, 240, 240), rgb(224, 224, 224));
+    vertical-align: bottom;
+}
+
+input[type=checkbox]:not(old):checked>span,
+input[type=radio]:not(old):checked>span {
+    background-image: -moz-linear-gradient(rgb(224, 224, 224), rgb(240, 240, 240));
+    background-image: -ms-linear-gradient(rgb(224, 224, 224), rgb(240, 240, 240));
+    background-image: -o-linear-gradient(rgb(224, 224, 224), rgb(240, 240, 240));
+    background-image: -webkit-linear-gradient(rgb(224, 224, 224), rgb(240, 240, 240));
+    background-image: linear-gradient(rgb(224, 224, 224), rgb(240, 240, 240));
+}
+
+input[type=checkbox]:not(old):checked+label>span:before {
+    content: '✓';
+    display: block;
+    width: 1em;
+    color: rgb(153, 204, 102);
+    font-size: 0.875em;
+    line-height: 1em;
+    text-align: center;
+    text-shadow: 0 0 0.0714em rgb(115, 153, 77);
+    font-weight: bold;
+}
+
+input[type=radio]:not(old):checked+label>span>span {
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0.125em;
+    border: 0.0625em solid rgb(115, 153, 77);
+    border-radius: 0.125em;
+    background: rgb(153, 204, 102);
+    background-image: -moz-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+    background-image: -ms-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+    background-image: -o-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+    background-image: -webkit-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+    background-image: linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+} */
+
+/* SLIDER SETINGS */
+
+#fieldset5 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 18px 0;
+    padding: 0;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    background-color: unset;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    padding: 3px;
+    width: 100%;
+    height: 5px;
+
+    background: green;
+    box-shadow: 1px 1px 1px black, 0 0 1px #0d0d0d;
+    border: none;
+    border-radius: 2.5px;
+
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -10px;
+    height: 20px;
+    width: 20px;
+
+    background: lightgreen;
+    box-shadow: 1px 1px 1px black, 0 0 1px #0d0d0d;
+    border: 1px solid green;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: forestgreen;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    padding: 0;
+
+    background: green;
+    box-shadow: 1px 1px 1px black, 0 0 1px #0d0d0d;
+    border: none;
+    border-radius: 2.5px;
+
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    appearance: none;
+    margin-top: -10px;
+    height: 20px;
+    width: 20px;
+
+    background: lightgreen;
+    box-shadow: 1px 1px 1px black, 0 0 1px #0d0d0d;
+    border: 1px solid green;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+#rating_result {
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 5px;
+    width: 25px;
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: whitesmoke;
+    background-color: green;
+    border: 2px solid green;
+
+}
+
+/* BUTTONS */
+
+#buttons {
+    width: 300px;
+    margin: 20px auto;
+}
+
+#buttons button {
+    width: 120px;
+    padding: 15px 10px;
+    margin-right: 25px;
+
+    font-weight: 700;
+    font-size: 1.2em;
+
+    color: whitesmoke;
+    /* background-color: #25d433; */
+    background-image: linear-gradient(#018801, #26a726);
+    border-top: 2px solid #018801;
+    border-left: 2px solid #018801;
+    border-bottom: 2px solid #26a726;
+    border-right: 2px solid #26a726;
+
+    cursor: pointer;
+}
+
+#buttons button:hover {
+    background-color: greenyellow;
+    background-image: linear-gradient(#26a726, greenyellow);
+    transition: background-color ease-out 500ms;
+}
+
+#buttons button:active {
+    color: grey;
+    background-color: lightyellow;
+    background-image: linear-gradient(greenyellow, greenyellow);
+    transition-delay: 10ms;
+}

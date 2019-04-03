@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 10</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="surveyHeader">
+            <h1>Survey</h1>
+            <p>If you have a moment, we'd appreciate if you would fill out this survey</p>
+        </header>
+        <form id="form" action="submit">
+            <fieldset id="fieldset1">
+                <legend>Your Information</legend>
+                <div>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstName" placeholder="Enter your First Name" tabindex="1" required>
+                </div>
+                <div>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastName" placeholder="Enter your Last Name" tabindex="2" required>
+                </div>
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" tabindex="3" autofocus required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                </div>
+                 <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" pattern="\+[0-9]{1,3}-[0-9]{2}-[0-9]{7}" title="Phone number must be in the following format: +XXX-XX-XXXXXXX" required>
+                </div>
+            </fieldset>
+            <fieldset id="fieldset2">
+                <legend>Contact</legend>
+                <p>Please Contact me by:</p>
+                <div class="row">
+                    <label for="contact-email">Email<input type="checkbox" id="contact-email"  value="email" selected></label>
+                    
+                    <label for="contact-postal">Postal<input type="checkbox" id="contact-postal" value="postal"></label>
+                    
+                    <label for="contact-phone">Phone<input type="checkbox" id="contact-phone" value="phone"></label>
+                    
+                </div>
+                <div class="row">
+                    <label for="contact-facebook">Facebook<input type="checkbox" id="contact-facebook" value="facebook"></label>
+                    
+                    <label for="contact-twitter">Twitter<input type="checkbox" id="contact-twitter" value="twitter"></label>
+                    
+                    <label for="contact-linkedin">LinkedIn<input type="checkbox" id="contact-linkedin" value="linkedin"></label>
+                    
+                </div>
+            </fieldset>
+            <fieldset id="fieldset3">
+                <legend>Would You like to receive anouncements about new CDs and specialoffers?</legend>
+                <!-- Implicit label association with input -->
+                <label>
+                    <input type="checkbox" id="contact" tabindex="4" checked> Yes, I'd like to receive Information on new CD's and special offers.
+                </label>
+
+            </fieldset>
+            <fieldset id="fieldset4">
+                <legend>How did you hear about us?</legend>
+                <div>
+                    <input type="radio" name="radioOption1" id="Search_Engine" value="Search Engine" tabindex="6" required>
+                    <label for="Search_Engine">Search Engine</label>
+                </div>
+                <div>
+                    <input type="radio" name="radioOption1" id="Word_of_Mouth" value="Word of mouth" tabindex="6" required>
+                    <label for="Word_of_Mouth">Word of mouth</label>
+                </div>
+                <div>
+                    <input type="radio" name="radioOption1" id="Other" value="Other" tabindex="6" checked="checked" required>
+                    <label for="Other">Other</label>
+                </div>
+            </fieldset>
+            <fieldset id="fieldset5">
+                <legend>Site Rating</legend>
+                <label for="rating" id="rating_lbl">How do you like this page:</label>
+                <input type="range" name="rating" id="rating" min="1" max="5" value="5">
+                <output id="rating_result" name="rating_result"></output>
+            </fieldset>
+            <fieldset id="fieldset6">
+                <legend>Comments</legend>
+                <textarea cols="60" rows="5"></textarea>
+            </fieldset>
+            <hr>
+            <div id="buttons">
+                <button type="submit" formmethod="GET">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function recalcTip() {
+            // timout is necessary for reset to work properlly
+            window.setTimeout(function () {
+                document.getElementById('rating_result').innerHTML = document.getElementById('rating').value;
+            }, 10)
+        }
+
+        document.getElementById('rating').addEventListener('input', recalcTip);
+
+        document.getElementById('form').addEventListener('reset', recalcTip);
+
+        window.addEventListener('DOMContentLoaded', recalcTip);
+    </script>
+
+</body>
+
+</html>
